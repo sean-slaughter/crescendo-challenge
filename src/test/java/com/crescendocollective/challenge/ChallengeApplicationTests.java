@@ -30,5 +30,12 @@ class ChallengeApplicationTests {
         ResponseEntity<Business> testResponse = yelpService.getReviewsResponse();
         assertEquals(HttpStatus.OK, testResponse.getStatusCode());
     }
+    @Test
+    void testBusinessModel(){
+        Business testBiz = yelpService.getBusiness(yelpService.getReviewsResponse());
+        assertThat(testBiz).isNotNull();
+        assertThat(testBiz.getReviews()).isNotNull();
+        assertThat(testBiz.getReviews().get(0)).isNotNull();
+    }
 
 }
