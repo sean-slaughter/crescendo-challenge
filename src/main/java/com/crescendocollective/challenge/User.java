@@ -10,9 +10,6 @@ public class User {
     private String profile_url;
     private String image_url;
     private String name;
-
-
-
     private Face face;
 
     //getters and setters
