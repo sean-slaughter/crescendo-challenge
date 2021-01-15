@@ -8,6 +8,7 @@ import java.util.List;
 public class Business {
     private List<Review> reviews;
 
+    //getters and setters
     public List<Review> getReviews() {
         return reviews;
     }

@@ -32,4 +32,7 @@ public class YelpService {
         return restTemplate.exchange(
                 REVIEWS_QUERY, HttpMethod.GET, getHttpEntity(), Business.class);
     }
+    public Business getBusiness(ResponseEntity<Business> response){
+        return response.getBody();
+    }
 }
