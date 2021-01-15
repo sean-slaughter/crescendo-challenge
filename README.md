@@ -13,3 +13,5 @@ To run this program: <br>
 6. Run the program with the command './mvnw spring-boot:run'<br>
 
 Thanks for the challenge, I had a lot of fun with this one!
+
+Note: I thought that the yelp.properties file and google credentials JSON file were both being ignored by git.ignore, looks like I made a mistake but I went and deleted these API keys from my accounts, just for the record!
