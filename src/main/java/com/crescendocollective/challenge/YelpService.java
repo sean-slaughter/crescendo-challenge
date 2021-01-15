@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 @PropertySource("classpath:yelp.properties")
 public class YelpService {
-    @Value("{$YELP_API_KEY")
+    @Value("${YELP_API_KEY}")
     private String key;
     private final RestTemplate restTemplate = new RestTemplate();
 
@@ -26,11 +26,10 @@ public class YelpService {
         headers.set("Authorization", "Bearer " + key);
         return new HttpEntity<String>(headers);
     }
-    //send GET request to Yelp Fusion API and return Business object
-    public Business getReviews(){
+    //send GET request to Yelp Fusion API and return response
+    public ResponseEntity<Business> getReviewsResponse(){
         String REVIEWS_QUERY = "https://api.yelp.com/v3/businesses/k0jk7sVdHDPqr-jnVJWlmA/reviews";
-        ResponseEntity<Business> response = restTemplate.exchange(
+        return restTemplate.exchange(
                 REVIEWS_QUERY, HttpMethod.GET, getHttpEntity(), Business.class);
-        return response.getBody();
     }
 }
