@@ -11,6 +11,10 @@ public class User {
     private String image_url;
     private String name;
 
+
+
+    private Face face;
+
     //getters and setters
     public String getId() {
         return id;
@@ -43,4 +47,8 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Face getFace() { return face; }
+
+    public void setFace(Face face) { this.face = face; }
 }
