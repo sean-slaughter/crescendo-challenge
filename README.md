@@ -8,7 +8,7 @@ To run this program: <br>
 1. Clone this repository and cd into the project folder.<br>
 2. Make sure you have Maven installed on your local machine.<br>
 3. Put the Yelp API credentials into the file 'src/main/resources/yelp.properties'.<br>
-4. Put the Google Vision API credientials into the directory 'src/main/resources/'.<br>
+4. Put the Google Vision API credentials into the directory 'src/main/resources/'.<br>
 5. Add the following line to application.properties file 'spring.cloud.gcp.credentials.location=file:src/main/resources/<GOOGLE_CREDENTIALS_FILENAME>'<br>
 6. Run the program with the command './mvnw spring-boot:run'<br>
 
