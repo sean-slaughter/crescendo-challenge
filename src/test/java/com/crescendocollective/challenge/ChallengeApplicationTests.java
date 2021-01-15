@@ -50,4 +50,13 @@ class ChallengeApplicationTests {
         assertThat(testBiz.getReviews().get(0)).isNotNull();
     }
 
+    //test for Google Vision API
+    @Test
+    void testFaces(){
+        Business testBiz = yelpController.getReviews();
+        testBiz.getReviews().forEach(review -> {
+            assertThat(review.getUser().getFace()).isNotNull();
+        });
+    }
+
 }
